@@ -1,3 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr calc(100vh);
+}
+
 h1 {
-    color: red;
+
+}
+
+header {
+    background-color: blue;
+    grid-column: 2 / -1;
+}
+
+.sidebar {
+    background-color: green;
+    grid-column: 1/1;
+    grid-row: 1 / -1;
+}
+
+.main {
+    background-color: purple;
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
 }
