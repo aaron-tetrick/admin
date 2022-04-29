@@ -7,12 +7,10 @@
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr calc(100vh);
+    grid-template-rows: 15vh 85vh;
 }
 
-h1 {
 
-}
 
 header {
     background-color: blue;
@@ -23,6 +21,21 @@ header {
     background-color: green;
     grid-column: 1/1;
     grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h1 {
+    text-align: center;
+    
+
+}
+
+.sidebar ul {
+    list-style-type: none;
+    font-size: 30px;
+    margin-left: 50px;
 }
 
 .main {
