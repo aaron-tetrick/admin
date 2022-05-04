@@ -7,15 +7,22 @@
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 15vh 85vh;
+    grid-template-rows: 20vh 80vh;
 }
 
 
 /*HEADER*/
 header {
-    background-color: blue;
+    background-color: rgb(190, 190, 190);
     grid-column: 2 / -1;
     display: grid;
+}
+
+.header-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 150px;
 }
 
 .img-header {
@@ -24,19 +31,69 @@ header {
     align-items: center;
 }
 
-.header-div1 {
-    border: 2px black solid;
+.magnify {
+    background-image: url(magnify.svg);
+    background-repeat: no-repeat;
+    border: #107C10 solid 2px;
+    border-radius: 50%;
 }
 
-.header-div2 {
+.search {
+    border-radius: 25px;
+    height: 30px;
+    width: 700px;
+    border: white solid 1px;
+}
+
+.searchbar {
     display: flex;
-    border: 2px black solid;
     justify-content: center;
     align-items: center;
+    gap: 10px
+    
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.xbox-live {
+    background-image: url(xbox-live.svg);
+    border-radius: 50%;
+}
+.user-icon {
+    width: 50px;
+    border-radius: 50%;
+    width: 75px;
 }
 
 .name {
     display: inline;
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+.button-group,
+.img-header   {
+    display: flex;
+    gap: 20px;
+}
+
+h2 > a {
+    text-decoration: none;
+    color: black;
+}
+.button-group > button {
+    background-color: #107C10;
+    width: 150px;
+    height: 40px;
+    border: #107C10 solid 1px;
+    border-radius: 25px;
+    font-size: 18px;
 }
 /*SIDEBAR*/
 .sidebar {
@@ -74,15 +131,8 @@ h1,
     grid-row: 2 / -1;
 }
 
-.svg {
-    background-color: chartreuse;
-}
+/*PSEUDO CLASSES*/
 
-.xbox-live {
-    background-image: url(xbox-live.svg);
-    border-radius: 50%;
-}
-.user-icon {
-    width: 50px;
-    border-radius: 50%;
+.search::after {
+    content: "Hello";
 }
