@@ -22,6 +22,8 @@ header {
     background-color: #fff;
     grid-column: 2 / -1;
     display: grid;
+    box-shadow: 0px 0px 12px 2px black;
+    z-index: 1;
 }
 
 .header-div {
@@ -112,6 +114,8 @@ h2 > a {
     flex-direction: column;
     align-items: flex-start;
     gap: 5rem;
+    z-index: 2;
+   
     
 }
 
@@ -154,8 +158,8 @@ li img {
     grid-row: 2 / -1;
     display: grid;
     justify-content: center;
-    gap: 1rem;
-    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
@@ -169,14 +173,18 @@ li img {
 .announcements {
     grid-column: 2;
     grid-row: 1;
-    border: 3px orange solid;
     width: 80%;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    
 }
 
 .announcements div {
-    border-bottom: 1px solid black;
-    padding: 0px 15px;
+    padding: 8px 15px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.announcements div:last-child {
+    border: none;
 }
 
 .announcements div h4 {
@@ -185,8 +193,10 @@ li img {
 }
 
 .announcements div p {
-    font-size: 12px;
+    font-size: 14px;
 }
+
+
 
 
 
@@ -200,7 +210,6 @@ li img {
 .friends {
     grid-column: 2;
     grid-row: 2;
-    border: 3px red solid;
     width: 80%;
 }
 
@@ -208,13 +217,18 @@ li img {
  .announcement-info {
     display: grid;
     align-items: center;
-    gap: 10px;
     background-color: #fff;
-    padding: 30px;
     border-radius: 8px;
     height: 80%;
-    width: 100%;
+    width: 80%;
     margin-top: 5px;
+    box-shadow: 2px 5px 10px 5px gray;
+}
+
+.friends-usernames {
+    gap: 10px;
+    padding: 30px;
+
 }
 
 .friends-usernames div {
