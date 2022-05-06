@@ -13,7 +13,7 @@ body {
 
 :root {
     --main-color: #107C10;
-    --secondary-color: rgb(190, 190, 190);
+    --secondary-color: rgb(214, 214, 214);
 
 }
 
@@ -22,8 +22,9 @@ header {
     background-color: #fff;
     grid-column: 2 / -1;
     display: grid;
-    box-shadow: 0px 0px 12px 2px black;
-    z-index: 1;
+    box-shadow: 4px 0px 10px 1px black;
+    z-index: 0;
+    border-radius: 0px 0px 0px 8px;
 }
 
 .header-div {
@@ -62,6 +63,11 @@ header {
     
 }
 
+::placeholder {
+    color: black;
+
+}
+
 .top-bar {
     display: flex;
     align-items: center;
@@ -98,10 +104,10 @@ h2 > a {
     color: black;
 }
 .button-group > button {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     width: 150px;
     height: 40px;
-    border: #107C10 solid 1px;
+    border: var(--main-color) solid 1px;
     border-radius: 25px;
     font-size: 18px;
 }
@@ -115,6 +121,7 @@ h2 > a {
     align-items: flex-start;
     gap: 5rem;
     z-index: 2;
+    border-right: 5px solid var(--secondary-color);
    
     
 }
@@ -196,7 +203,7 @@ li img {
     border-radius: 8px;
     display: grid;
     align-items: center;
-    box-shadow: 2px 5px 10px 5px gray;
+    box-shadow: 2px 5px 8px 3px gray;
     border-left: 10px solid #107C10;
 }
 
@@ -272,8 +279,6 @@ li img {
 }
 
 
-
-
 /*CURRENTLY ONLINE SECTION*/
 
 .friends {
@@ -291,7 +296,7 @@ li img {
     height: 80%;
     width: 110%;
     margin-top: 5px;
-    box-shadow: 2px 5px 10px 5px gray;
+    box-shadow: 2px 5px 8px 3px gray;
 }
 
 .friends-usernames {
@@ -332,16 +337,22 @@ li img {
 }
 /*PSEUDO CLASSES*/
 
-.sidebar ul li:hover, button:hover {
+button:hover {
     color: white;
     transition: 0.2s;
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .play:hover,
 .info:hover,
 .delete:hover {
-    fill: var(--main-color);
+    filter: invert(21%) sepia(99%) saturate(2131%) hue-rotate(99deg) brightness(98%) contrast(87%);
     transform: scale(1.2);
     transition: 0.2s;
+    cursor: pointer;
+}
+
+input[type="search"]:active {
+    background-color: #fff;
 }
