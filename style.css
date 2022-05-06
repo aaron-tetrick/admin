@@ -47,7 +47,7 @@ header {
 .search {
     border-radius: 25px;
     height: 30px;
-    width: 700px;
+    width: 600px;
     border: white solid 1px;
     background-color: var(--secondary-color);
     color: black;
@@ -159,17 +159,92 @@ li img {
     display: grid;
     justify-content: center;
     gap: 2rem;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
-.projects {
-    display: grid;
+/*GAMES SECTION*/
+.games {
     grid-column: 1;
     grid-row: 1 / -1;
-    border: 3px blue solid;
+    margin: 2rem 0rem 0rem 2rem;
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.games h3 {
+    text-align: start;
+}
+
+.game-library {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%;
+    border: 2px orange solid;
+}
+
+.game-library > div {
+    padding: 3%;
+    background-color: #fff;
+    border-radius: 8px;
+    display: grid;
+    align-items: center;
+    box-shadow: 2px 5px 10px 5px gray;
+    border-left: 10px solid #107C10;
+}
+
+.game-titles {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 15px;
+}
+.games h4 {
+    font-size: 25px;
+    display: inline;
+    width: fit-content;
+}
+.games p {
+    font-size: 18px;
+}
+
+.game-img {
+    display: inline;
+    width: 100px;
+    border-radius: 8px
+}
+
+.game-icons {
+    display: grid;
+    grid-template-columns: 20px 20px 20px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+    gap: 25px;
+    
+}
+
+.game-icons img {
+
+}
+
+.play {
+    width: 33px;
+}
+
+
+
+
+
+
+/*ANNOUNCEMENTS SECTION*/
 .announcements {
     grid-column: 2;
     grid-row: 1;
@@ -199,13 +274,7 @@ li img {
 
 
 
-
-
-
-
-
-
-
+/*CURRENTLY ONLINE SECTION*/
 
 .friends {
     grid-column: 2;
@@ -220,7 +289,7 @@ li img {
     background-color: #fff;
     border-radius: 8px;
     height: 80%;
-    width: 80%;
+    width: 110%;
     margin-top: 5px;
     box-shadow: 2px 5px 10px 5px gray;
 }
@@ -267,4 +336,12 @@ li img {
     color: white;
     transition: 0.2s;
     transform: scale(1.1);
+}
+
+.play:hover,
+.info:hover,
+.delete:hover {
+    fill: var(--main-color);
+    transform: scale(1.2);
+    transition: 0.2s;
 }
