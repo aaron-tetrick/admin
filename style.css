@@ -11,10 +11,15 @@ body {
     grid-template-rows: 20vh 80vh;
 }
 
+:root {
+    --main-color: #107C10;
+    --secondary-color: rgb(190, 190, 190);
+
+}
 
 /*HEADER*/
 header {
-    background-color: rgb(190, 190, 190);
+    background-color: #fff;
     grid-column: 2 / -1;
     display: grid;
 }
@@ -42,6 +47,9 @@ header {
     height: 30px;
     width: 700px;
     border: white solid 1px;
+    background-color: var(--secondary-color);
+    color: black;
+    padding: 10px;
 }
 
 .searchbar {
@@ -88,7 +96,7 @@ h2 > a {
     color: black;
 }
 .button-group > button {
-    background-color: #107C10;
+    background-color: var(--main-color);
     width: 150px;
     height: 40px;
     border: #107C10 solid 1px;
@@ -97,7 +105,7 @@ h2 > a {
 }
 /*SIDEBAR*/
 .sidebar {
-    background-color: green;
+    background-color: var(--main-color);
     grid-column: 1;
     grid-row: 1 / -1;
     display: flex;
@@ -139,12 +147,106 @@ li img {
     width: 27px;
 }
 
+/*MAIN*/
 .main {
-    background-color: purple;
+    background-color: var(--secondary-color);
     grid-column: 2 / -1;
     grid-row: 2 / -1;
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
+.projects {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    border: 3px blue solid;
+}
+
+.announcements {
+    grid-column: 2;
+    grid-row: 1;
+    border: 3px orange solid;
+    width: 80%;
+    margin-top: 1rem;
+}
+
+.announcements div {
+    border-bottom: 1px solid black;
+    padding: 0px 15px;
+}
+
+.announcements div h4 {
+    font-weight: bold;
+ 
+}
+
+.announcements div p {
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+.friends {
+    grid-column: 2;
+    grid-row: 2;
+    border: 3px red solid;
+    width: 80%;
+}
+
+.friends-usernames,
+ .announcement-info {
+    display: grid;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    height: 80%;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.friends-usernames div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 15px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+}
+
+.userpics {
+    border-radius: 50%;
+    width: 50px;
+    grid-column: 1;
+    grid-row: 1/ -1;
+
+}
+
+.friends-usernames div p:first-child {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+.friends-usernames div p:last-child {
+    color: gray;
+    font-size: .8rem;
+    grid-column: 2;
+    grid-row: 2;
+}
 /*PSEUDO CLASSES*/
 
 .sidebar ul li:hover, button:hover {
