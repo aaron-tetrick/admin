@@ -9,6 +9,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 20vh 80vh;
+    background-color: var(--secondary-color);
 }
 
 :root {
@@ -24,7 +25,7 @@ header {
     display: grid;
     box-shadow: 4px 0px 10px 1px black;
     z-index: 0;
-    border-radius: 0px 0px 0px 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .header-div {
@@ -136,7 +137,9 @@ h2 > a {
     align-items: flex-start;
     gap: 5rem;
     z-index: 2;
-    border-right: 5px solid var(--secondary-color);
+    border-bottom: 10px solid var(--secondary-color);
+    border-right: 10px solid var(--secondary-color);
+    border-bottom-right-radius: 15px;
 }
 
 h1 {
@@ -184,6 +187,10 @@ li img {
 }
 
 /*GAMES SECTION*/
+
+.main {
+    border-left: var(--secondary-color) solid 5px;
+}
 .games {
     grid-column: 1;
     grid-row: 1 / -1;
