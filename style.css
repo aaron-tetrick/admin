@@ -47,12 +47,13 @@ header {
 
 .search {
     border-radius: 25px;
-    height: 30px;
+    height: 40px;
     width: 600px;
     border: white solid 1px;
     background-color: var(--secondary-color);
     color: black;
     padding: 10px;
+    font-size: 18px;
 }
 
 .searchbar {
@@ -91,6 +92,8 @@ header {
     display: inline;
     font-weight: bold;
     font-size: 1.75rem;
+    text-decoration: none;
+    color: black;
 }
 
 .button-group,
@@ -99,18 +102,28 @@ header {
     gap: 20px;
 }
 
+header p {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 2.25rem;
+
+}
+
 h2 > a {
     text-decoration: none;
     color: black;
 }
 .button-group > button {
     background-color: var(--main-color);
-    width: 125px;
+    width: 140px;
     height: 40px;
     border: var(--main-color) solid 1px;
     border-radius: 25px;
     font-size: 18px;
     font-weight: bold;
+    color: #fff;
 }
 
 /*SIDEBAR*/
@@ -124,8 +137,6 @@ h2 > a {
     gap: 5rem;
     z-index: 2;
     border-right: 5px solid var(--secondary-color);
-   
-    
 }
 
 h1 {
@@ -211,6 +222,12 @@ li img {
     height: 196.8px;
 }
 
+.games h3,
+.announcements h3,
+.friends h3 {
+    font-size: 22px;
+}
+
 .game-titles {
     display: flex;
     justify-content: space-between;
@@ -220,10 +237,6 @@ li img {
 .game-titles h4 {
     font-size: 25px;
 
-}
-
-.game-titles p {
-    
 }
 
 .hours {
@@ -255,10 +268,6 @@ li img {
 .play {
     width: 33px;
 }
-
-
-
-
 
 
 /*ANNOUNCEMENTS SECTION*/
@@ -333,19 +342,23 @@ li img {
     border-radius: 50%;
     width: 50px;
     grid-column: 1;
-    grid-row: 1/ -1;
+    grid-row: 1/-1;
 
+}
+
+.friends-usernames p {
+    font-size: 1.2rem;
 }
 
 .friends-usernames div p:first-child {
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 1;;
 }
 
 
 .friends-usernames div p:last-child {
     color: gray;
-    font-size: .8rem;
+    font-size: .9rem;
     grid-column: 2;
     grid-row: 2;
 }
