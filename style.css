@@ -1,3 +1,4 @@
+/*GENERAL STLYINGS*/
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +16,6 @@ body {
 :root {
     --main-color: #107C10;
     --secondary-color: rgb(214, 214, 214);
-
 }
 
 /*HEADER*/
@@ -62,12 +62,10 @@ header {
     justify-content: center;
     align-items: center;
     gap: 10px
-    
 }
 
 ::placeholder {
     color: black;
-
 }
 
 .top-bar {
@@ -76,7 +74,6 @@ header {
     justify-content: center;
     gap: 20px;
 }
-
 
 .xbox-live {
     background-image: url(xbox-live.svg);
@@ -97,25 +94,25 @@ header {
     color: black;
 }
 
-.button-group,
-.img-header   {
-    display: flex;
-    gap: 20px;
-}
-
 header p {
     font-size: 20px;
 }
 
 h2 {
     font-size: 2.25rem;
-
 }
 
 h2 > a {
     text-decoration: none;
     color: black;
 }
+
+.button-group,
+.img-header   {
+    display: flex;
+    gap: 20px;
+}
+
 .button-group > button {
     background-color: var(--main-color);
     width: 140px;
@@ -184,17 +181,14 @@ li img {
     gap: 2rem;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
+    border-left: var(--secondary-color) solid 5px;
 }
 
 /*GAMES SECTION*/
-
-.main {
-    border-left: var(--secondary-color) solid 5px;
-}
 .games {
     grid-column: 1;
     grid-row: 1 / -1;
-    margin: 0rem 0rem 0rem 2rem;
+    margin-left: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -235,15 +229,16 @@ li img {
     font-size: 22px;
 }
 
+/*GAME DIVS CONTENT*/
 .game-titles {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-right: 10px;
 }
+
 .game-titles h4 {
     font-size: 25px;
-
 }
 
 .hours {
@@ -251,15 +246,8 @@ li img {
     font-style: italic;
 }
 
-
 .games p {
     font-size: 16px;
-}
-
-.game-img {
-    display: inline;
-    width: 100px;
-    border-radius: 8px
 }
 
 .game-icons {
@@ -269,13 +257,11 @@ li img {
     align-items: center;
     gap: 25px;
     margin-right: 10px;
-    
 }
 
 .play {
     width: 33px;
 }
-
 
 /*ANNOUNCEMENTS SECTION*/
 .announcements {
@@ -283,13 +269,11 @@ li img {
     grid-row: 1;
     width: 80%;
     margin-top: 2rem;
-    
 }
 
 .announcements div {
     padding: 5px 15px;
     border-bottom: 1px solid var(--secondary-color);
-    
 }
 
 .announcements div:last-child {
@@ -298,7 +282,6 @@ li img {
 
 .announcements div h4 {
     font-weight: bold;
- 
 }
 
 .announcements div p {
@@ -332,7 +315,6 @@ li img {
     gap: 10px;
     padding: 30px;
     margin-bottom: 1rem;
-
 }
 
 .friends-usernames div {
@@ -350,7 +332,6 @@ li img {
     width: 50px;
     grid-column: 1;
     grid-row: 1/-1;
-
 }
 
 .friends-usernames p {
@@ -362,7 +343,6 @@ li img {
     grid-row: 1;;
 }
 
-
 .friends-usernames div p:last-child {
     color: gray;
     font-size: .9rem;
@@ -372,7 +352,6 @@ li img {
 /*PSEUDO CLASSES*/
 
 button:hover {
-    color: white;
     transition: 0.2s;
     transform: scale(1.1);
     cursor: pointer;
@@ -392,8 +371,4 @@ button:hover {
 }
 .delete:hover {
     filter: invert(13%) sepia(53%) saturate(7196%) hue-rotate(357deg) brightness(92%) contrast(114%);
-}
-
-input[type="search"]:active {
-    background-color: #fff;
 }
